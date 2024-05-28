@@ -1,0 +1,316 @@
+@media only screen and (max-width: 768px) {
+
+  main {
+    margin: 60PX 0;
+  }
+  .hamburguer {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s;
+    background-color: white;
+    padding: 20px 0;
+
+  }
+  nav ul li {
+    margin: 16px 0;
+  }
+  nav ul.active {
+    left: 0;
+  }
+  .whatsapp-btn{
+    display: none;
+  }
+  .titulo {
+    font-size: 30px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .cadastrarPlanos {
+    max-height: auto;
+  }
+
+ 
+  /* PLANOS */
+  .container-planos {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-planos {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .card-planos h4 {
+    font-size: 18px;
+  }
+
+  .card-planos h2 {
+    font-size: 30px;
+  }
+
+  .card-planos p {
+    font-size: 14px;
+  }
+
+  /* VANTAGENS */
+  .container-vantagens,
+  .card-vantagens {
+    width: calc(50% - 40px);
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .container-vantagens,
+  .card-vantagens p {
+    font-size: 16px;
+  }
+
+  .painel {
+    display: none;
+  }
+
+  /* CONTATO */
+  .contato-esquerda,
+  .contato-direita {
+    width: calc(100% - 40px);
+    max-width: 300px;
+    width: 300px;
+    margin: 20px auto;
+  }
+
+  .contato-centro {
+    display: none;
+  }
+
+  /* DÚVIDAS */
+  .dv-lista details summary {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .dv-lista details p {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .btn-social {
+    margin: 15px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+  /* SLIDER */
+  header {
+    flex-direction: column;
+  }
+
+  .planos {
+    text-align: center;
+    margin: auto;
+  }
+  .hamburguer{
+    margin: 0 20px;
+  }
+
+  /* Header Top */
+  .header-top {
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .header-top a {
+    margin: 5px;
+  }
+
+  /* Logo */
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Botão do WhatsApp */
+  .whatsapp-btn {
+    display: none;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .cadastrarPlanos {
+    max-height: auto;
+  }
+
+  /* Página de Login */
+  .login {
+    padding: 20px 0;
+  }
+
+  .form-login {
+    width: 80%;
+  }
+
+  .swiper {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    font-size: 5px;
+  }
+
+  .container-sobre {
+    margin: 0 20px;
+  }
+
+  /* PLANOS */
+  .container-planos {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-planos {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .card-planos h4 {
+    font-size: 18px;
+  }
+
+  .card-planos h2 {
+    font-size: 30px;
+  }
+
+  .card-planos p {
+    font-size: 14px;
+  }
+
+  /* VANTAGENS */
+  .container .card-vantagens {
+    width: 100%;
+    max-width: none;
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  .container .card-vantagens p {
+    font-size: 16px;
+  }
+
+  .painel {
+    display: none;
+  }
+
+
+  /* CONTATO */
+  .contato-esquerda,
+  .contato-direita {
+    width: 100%;
+    max-width: none;
+    margin: 20px 10px;
+  }
+
+  .contato-centro {
+    display: none;
+  }
+
+  .contato.esquerda p {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  /* DÚVIDAS */
+  .dv-lista details summary {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .dv-lista details p {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .redes-sociais {
+    margin-bottom: 20px;
+  }
+
+  .socialContainer {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .planos {
+    min-height: 700px;
+  }
+}

@@ -1,10 +1,10 @@
 <section class='contato'>
   <h1 class='titulo'>Contato</h1>
-  <p class='subtitulo'>Para entrar em contato conosco,segue abaixo os meios</p>
+  <p class='subtitulo'>Para entrar em contato conosco, segue abaixo os meios</p>
   <section class='container'>
     <section class='contato-esquerda'>
       <section class="meios-contato">
-        <section class="endereco">
+        <address class="endereco">
           <i class='fa-solid fa-location-dot'></i>
           <p>Fiber Fast Telecom
             <br />
@@ -18,27 +18,21 @@
             <br />
             CEP: 41510-190
           </p>
-        </section>
+        </address>
         <section class="atendimento">
           <i class='fa-solid fa-phone'></i>
           <p>Centrais de Atendimento<br />
             <a href="tel:+5571992613799"> Mussurunga: (71) 99261-3799</a>
             <br />
-            <a href="tel:+5571987152333">Parque São Cristóvão: (71) 9 8715-2333</a>
-            <br />
-            <a href="tel:+55714042-3080">Central Fixo: (71) 4042-3080</a>
+            <a href="tel:+557140423080">Central Fixo: (71) 4042-3080</a>
           </p>
         </section>
         <section class="email">
           <i class="fa-solid fa-envelope"></i><br>
-          <a href="malito:contato@fiberfasttelecom.com.br">contato@fiberfasttelecom.com.br</a>
+          <a href="mailto:contato@fiberfasttelecom.com.br">contato@fiberfasttelecom.com.br</a>
         </section>
 
-        <a href="https://www.instagram.com/fiberfasttelecom/ " target="_blank"> <i
-            class="fa-brands fa-instagram"></i></a>
-
-        <a href="https://api.whatsapp.com/send/?phone=5571992613799&text&app_absent=0" target="_blank"> <i
-            class="fa-brands fa-whatsapp"></i></a>
+     
       </section>
     </section>
     <section class="contato-centro"></section>
@@ -46,14 +40,13 @@
       <h3>Formulário</h3>
       <p>Preencha todos os campos</p>
 
-      <form action="/contato" method="POST" class="form-contato">
-        <input type='text' name='nome' id='nome' placeholder='Nome completo:' / class="input-contato" required>
-        <input type='email' name='email' id='email' placeholder='Email:' class="input-contato" required />
-        <input type='text' name='telefone' id='telefone' placeholder='Telefone:' class="input-contato" required />
+      <form action="/contato" method="POST" class="form-contato" id="form">
+        <input type='text' name='nome' id='nome' placeholder='Nome completo:' class="input-contato" required>
+        <input type='email' name='email' id='email' placeholder='Email:' class="input-contato" required>
+        <input type='text' name='telefone' id='telefone' placeholder='Telefone:' class="input-contato" required>
         <textarea name='mensagem' id='mensagem' placeholder='Deixe sua mensagem:' required></textarea>
-        <button type='submit' class='btn-form'>Enviar</button>
+        <button type='submit' class='btn-form' id="btn-form">Enviar</button>
       </form>
-
     </section>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15555.437472843203!2d-38.3638965!3d-12.9167589!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71616fd354083b3%3A0x76864bc353c9fc30!2sFiber%20Fast%20Telecom!5e0!3m2!1spt-BR!2sbr!4v1715364431071!5m2!1spt-BR!2sbr"

@@ -1,4 +1,4 @@
-// IMPORTANDO O EXPRESS,HANDLEBARS,BODY-PARSER,MULTER,NODEMAILER,DOTENV
+// IMPORTANDO O EXPRESS,HANDLEBARS,BODY-PARSER,NODEMAILER,DOTENV
 const express = require('express')
 const { engine } = require('express-handlebars')
 const bp = require('body-parser')
@@ -20,6 +20,9 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 
 // ROTAS GET
+app.get('/home', (req, res) => {
+  res.render('home');
+});
 app.get('/', (req, res) => {
   res.render('home')
 })
@@ -39,7 +42,9 @@ app.get('/contato', (req, res) => {
 
 // CONFIG NODEMAILER
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: "gmail",
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.SENHA,
@@ -47,7 +52,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/contato', (req, res) => {
-  
+
   async function main() {
     const { nome, email, telefone, mensagem } = req.body;
     const info = await transporter.sendMail({
@@ -56,19 +61,16 @@ app.post('/contato', (req, res) => {
       subject: "CLIENTE ENTROU EM CONTATO",
       text: `Nome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`,
     });
-    
+
     console.log(req.body);
     console.log("Message sent: %s", info.messageId);
   }
 
-  res.send('<script>alert("O formulário foi enviado com sucesso!"); window.location.href="/home";</script>');
+  res.send(`<script> alert("O formulário foi enviado com sucesso!"); window.location.href = "/home"; </script>`);
   main().catch(console.error);
 
 });
 
-app.get('/home', (req, res) => {
-  res.render('home'); 
-});
 // INICIALIZAR SERVIDOR
 app.listen(3000, () => {
   console.log('Servidor funcionando na porta http://localhost:3000')

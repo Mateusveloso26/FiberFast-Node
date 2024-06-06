@@ -2,10 +2,6 @@
 const swiper = new Swiper('.swiper', {
   cssMode: true,
   loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -14,36 +10,27 @@ const swiper = new Swiper('.swiper', {
     delay: 5000,
     disableOnInteraction: false,
   },
+  scrollbar:{
+    el:'.swiper.scrollbar',
+  },
   keyboard: true,
 })
 
 // SCROLLREVEAL
 document.addEventListener('DOMContentLoaded', function () {
   if (window.innerWidth > 768) {
-    ScrollReveal({ reset: true });
+    ScrollReveal({ reset: false });
 
-    ScrollReveal().reveal('.planos', {
+    ScrollReveal().reveal('.animacao ', {
       origin: 'bottom',
       distance: '50px',
-      duration: 1200,
+      duration: 1500,
       easing: 'ease-in-out'
     });
 
-    ScrollReveal().reveal('.vantagens', {
-      rotate: { x: 0, y: 80, z: 0 },
-
-      delay: 250
-
-    });
-  } else {
-    ScrollReveal().clean('.planos');
-    ScrollReveal().clean('.vantagens');
-  }
-});
-
-
-
-//  botão de voltar ao topo
+   
+  } 
+});//  botão de voltar ao topo
 window.onscroll = function () {
   scrollFunction()
 }
@@ -76,4 +63,41 @@ const navMenu = document.querySelector('header nav ul');
 hamburguer.addEventListener('click', () => {
   hamburguer.classList.toggle('active');
   navMenu.classList.toggle('active');
+});
+
+//  VALIDAÇÃO DE FORMULARIO
+
+const form = document.getElementById('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  
+  const nome = document.getElementById('nome');
+  const email = document.getElementById('email');
+  const telefone = document.getElementById('telefone');
+  const mensagem = document.getElementById('mensagem');
+  
+  const nomeValor = nome.value.trim();
+  const emailValor = email.value.trim();
+  const telefoneValor = telefone.value.trim();
+  const mensagemValor = mensagem.value.trim();
+  
+  if (nomeValor === '') {
+    alert('Campo nome vazio');
+    nome.focus();
+    return false;
+  } else if (emailValor === '') {
+    alert('Campo email vazio');
+    email.focus();
+    return false;
+  } else if (telefoneValor === '') {
+    alert('Campo telefone vazio');
+    telefone.focus();
+    return false;
+  } else if (mensagemValor === '') {
+    alert('Campo mensagem vazio');
+    mensagem.focus();
+    return false;
+  } else {
+    form.submit();
+  }
 });

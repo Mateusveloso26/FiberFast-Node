@@ -52,7 +52,7 @@
     }
 
     .painel1 p {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     /* TITULO  E SUBTITULO*/
@@ -66,21 +66,13 @@
         margin: 15px 10%
     }
 
-    .card-planos {
-        height: auto;
-        width: 180px;
-    }
-
     /* VANTAGENS */
-    .vantagens {
-        background-color: #040c3f;
-    }
-
     .vantagens .titulo-mobile,
     .subtitulo-mobile {
         color: #fff;
     }
 
+    /* PAINEL 2 */
     .painel2 {
         flex-direction: column;
         height: auto;
@@ -96,18 +88,48 @@
     }
 
     .texto-painel2 h1 {
-        font-size: 18px;
+        font-size: 30px;
     }
 
-    .dv-lista details summary {
-        width: 350px;
+    /* CONTATO */
+    .contato {
+        padding: 10px;
     }
 
-    .dv-lista details p {
+    .container-contato {
+        flex-direction: column;
+    }
+
+    .contato-form,
+    .meios-contato {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contato-form h2,
+    .meios-contato h2 {
+        font-size: 20px;
+    }
+
+    .contato-form form input,
+    .contato-form form textarea {
         width: 100%;
     }
 
+    iframe {
+        width: 100%;
+        height: 200px;
+        /* Reduzir a altura do mapa para telas menores */
+    }
 
+
+    /* DUVIDAS */
+    .dv-lista details summary {
+        width: 300px;
+
+    }
+
+    /* FOOTER */
     .footer-container {
         flex-direction: column;
         justify-content: center;
@@ -130,23 +152,134 @@
     }
 
 }
-@media screen and (min-width: 14740px) {
-    .pag-planos{
-        height: 700px;
+
+@media screen and (min-width:641px) and (max-width:1024px) {
+    .hamburguer {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 15px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: ease-in 0.3s;
+        background-color: white;
+        padding: 20px 0;
+    }
+   
+    nav ul li {
+        margin: 16px 0;
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    .whatsapp-btn {
+        display: none;
+    }
+    .titulo {
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        margin: 15px 10%
+    }
+    .painel2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .painel2 img {
+        width: 100%;
+    }
+
+    .texto-painel2 {
+        margin: -70px 0;
+        margin-bottom: 100px;
+    }
+
+    .texto-painel2 h1 {
+        font-size: 30px;
+    }
+
+    /* CONTATO */
+    .contato {
+        padding: 10px;
+    }
+
+    .container-contato {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .contato-form,
+    .meios-contato {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contato-form h2,
+    .meios-contato h2 {
+        font-size: 20px;
+    }
+
+    .contato-form form input,
+    .contato-form form textarea {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 200px;
+        /* Reduzir a altura do mapa para telas menores */
+    }
+     /* DUVIDAS */
+     .dv-lista details summary {
+        width: 600px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
 
     }
+
+    .redes-sociais {
+        margin-bottom: 20px;
+    }
+
+    .socialContainer {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer p {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 1400px) {
+    .pag-planos {
+        height: 700px;
+    }
+
     .container-planos {
         display: flex;
         justify-content: center;
-       
     }
 }
-
-@media only screen and (min-width: 1450px) {
-    .planos {
-      min-height: 700px;
-    }
-  }
-
-/* Média (641 px a 1.007 px)
-Grande (1.008 px e maior) */

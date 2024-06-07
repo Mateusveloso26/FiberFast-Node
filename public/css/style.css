@@ -101,20 +101,20 @@ body {
 }
 
 .titulo {
-  color: #030930;
+  color: #ffffff;
   font-size: 40px;
   text-align: center;
 }
 
 .subtitulo {
   margin-top: 10px;
-  color: #030930;
+  color: #ffffff;
   font-size: 20px;
   text-align: center;
 }
 
 main {
-  background-color: #f1f1f1ef;
+  background-color: #f7f7f7;
   width: 100%;
   margin-top: 60px;
 }
@@ -149,9 +149,9 @@ main {
 
 hr {
   border: none;
-  background-color: #777777;
+  background-color: #ffffff;
   color: #ccc;
-  height: 1px;
+  height: 2px;
 }
 
 .whatsapp-fixed {
@@ -192,7 +192,6 @@ hr {
 }
 
 .sobre h1 {
-  margin-top: 40px;
   color: #ffffff;
 }
 
@@ -200,7 +199,6 @@ hr {
   margin: 3px;
   color: #ffffff;
   font-size: 25px;
-  font-style: italic;
 }
 
 .container-sobre {
@@ -241,7 +239,7 @@ hr {
 /* PAINEL 1 */
 .painel1 {
   background: linear-gradient(to left, #315bb8, #7dc4db);
-  height: 100px;
+  height: 150px;
   display: flex;
 }
 
@@ -259,22 +257,13 @@ hr {
 .planos {
   text-align: center;
   padding: 40px 0;
+  background-color: #040c3f;
+}
+.planos .titulo, .subtitulo{
+  color: #fff;
 }
 
-.pag-planos {
-  height: auto;
-  background-image: url('/img/background-planos.jpg');
-}
-.painel-planos {
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 200px;
-  overflow: hidden;
-  background: linear-gradient(to left, #315bb8, #7dc4db);
-}
+
 
 .planos p {
   margin-bottom: 60px;
@@ -291,25 +280,24 @@ hr {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  /* Adiciona um espaço entre as linhas de cards */
 }
 
 .card-planos {
-  background-color: #1e6bc7;
+  background-color: transparent;
   border-radius: 8px;
   box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
-  padding: 20px;
+  padding: 30px;
   margin: 20px;
-  width: 200px;
-  max-height: 360px;
+  width: 230px;
+  height: 400px;
   transition: all 0.3s ease-out;
   overflow: hidden;
-  border: 2px solid #e6c850;
+  border: 5px double #e6c850;
   position: relative;
 }
 
 .card-3 span {
-  width: 220px;
+  width: 250px;
   height: 150px;
   position: absolute;
   left: -10px;
@@ -332,7 +320,7 @@ hr {
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-
+  color: #030930;
 }
 
 .card-planos h4 {
@@ -371,7 +359,7 @@ hr {
 
 .btn-planos {
   background: #ffde59;
-  padding: 9px;
+  padding: 16px;
   border: none;
   border-radius: 8px;
   margin-top: 15px;
@@ -461,89 +449,50 @@ hr {
 
 /*  CONTATO */
 .contato {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 0;
-}
+display: flex;
+flex-direction: column;
+background-color: #040c3f;
 
-.contato h3 {
-  font-size: 30px;
-  margin-top: 20px;
-  color: #fff;
-  margin-top: 60px;
 }
-
-.contato-direita {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  height: auto;
-  justify-content: center;
-  background-color: #1d4eb6;
-  margin-bottom: 70px;
-  overflow: hidden;
-}
-
-.contato-centro {
-  width: 0.3%;
-  background-color: #ffde59;
-  height: 500px;
-}
-
-.contato-esquerda {
-  display: flex;
-  height: 500px;
-  flex-direction: column;
-  width: 45%;
-  justify-content: center;
-  background-color: #1d4eb6;
-  margin-bottom: 70px;
-  overflow: hidden;
-}
-
-.meios-contato a {
-  text-decoration: none;
+.contato h1 {
+  margin: 50px  0;
   color: #fff;
 }
-
-.fa-whatsapp,
-.fa-instagram {
-  font-size: 25px;
-  color: white;
-  margin: 5px;
-  cursor: pointer;
+.container-contato {
+  justify-content: space-evenly;
+  align-items: flex-start;
+  display: flex;
+  margin: 50px;
 }
 
-.contato-esquerda p,
-.contato-direita p {
+.contato-form,
+.meios-contato {
+  background-color: #040c3f;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 400px;
+  border: 5px solid #e6c850;
+}
+
+.contato-form h2,
+.meios-contato h2 {
+  margin-bottom: 20px;
   color: #ffffff;
-  font-size: 16px;
 }
 
-.form-contato {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  justify-content: center;
-  margin: auto;
-}
-
-.input-contato,
-textarea,
-.btn-form {
-  margin: 5px;
-  padding: 15px;
-  outline: none;
-  border-radius: 6px;
-  border: none;
+.contato-form form input,
+.contato-form form textarea,.btn-form {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 
 }
-
-textarea {
+form textarea{
   resize: none;
 }
-
 .btn-form {
   cursor: pointer;
   background-color: #ffde59;
@@ -554,29 +503,24 @@ textarea {
 .btn-form:hover {
   background-color: #f8e186;
 }
-
-.meios-contato {
-  margin: auto;
-  font-size: 16px;
+.meios-contato p {
+  margin: 10px 0;
+  color: #ffffffd2;
+}
+.meios-contato a{
+  text-decoration: none;
+  color: #ffffffd2;
 }
 
-.endereco,
-.email,
-.atendimento {
-  margin: 40px;
-}
-
-.fa-envelope,
-.fa-phone,
-.fa-location-dot {
-  color: #dfdada;
-  font-size: 20px;
+.meios-contato strong {
+  color: #ffffff;
 }
 
 /*  DÚVIDAS FREQUENTES*/
 .duvidas {
   text-align: center;
   padding: 40px 0;
+  background-color: #040c3f;
 }
 
 .dv-lista {
@@ -611,9 +555,10 @@ details {
 /* FOOTER */
 footer {
   text-align: center;
-  background-color: #030930;
+  background-color: #030720;
   padding: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 footer p {

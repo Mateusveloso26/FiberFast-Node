@@ -6,7 +6,7 @@ const dotenv = require('dotenv').config();
 const nodemailer = require("nodemailer");
 
 const app = express()
-
+const PORT = process.env.PORT || 3000;
 
 // CONFIG BODY PARSER
 app.use(bp.urlencoded({ extended: false }))
@@ -62,16 +62,12 @@ app.post('/contato', (req, res) => {
       text: `Nome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`,
     });
 
-    console.log(req.body);
-    console.log("Message sent: %s", info.messageId);
+  
   }
-
   res.send(`<script> alert("O formulário foi enviado com sucesso!"); window.location.href = "/home"; </script>`);
-  main().catch(console.error);
-
 });
 
 // INICIALIZAR SERVIDOR
-app.listen(3000, () => {
-  console.log('Servidor funcionando na porta http://localhost:3000')
-})
+app.listen(PORT, () => {
+  console.log(`Servidor funcionando na porta http://localhost:${PORT}`)
+});

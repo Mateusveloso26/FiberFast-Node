@@ -14,7 +14,7 @@ Bem-vindo à aplicação da Fiber Fast Telecom! Este projeto foi criado para apr
 - HTML
 - CSS
 
-  ## Funcionalidades
+## Funcionalidades
 - Sobre a Empresa: Informações detalhadas sobre a Fiber Fast Telecom, nossa missão, visão e valores.
 - Planos Disponíveis: Detalhes dos planos de internet oferecidos, com velocidades e preços.
 - Vantagens: Benefícios de escolher a Fiber Fast Telecom, incluindo suporte ao cliente, estabilidade e velocidade.

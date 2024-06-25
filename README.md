@@ -46,3 +46,6 @@ npm start
 ```
 http://localhost:3000
 ```
+
+![fiber](https://github.com/Mateusveloso26/Site-Fiber/assets/135018940/b3a535e0-715a-45fe-8f97-0f66ae6e0747)
+
